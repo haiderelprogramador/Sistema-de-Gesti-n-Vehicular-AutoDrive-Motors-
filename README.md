@@ -28,6 +28,11 @@ Consola de la base: http://localhost:8080/h2-console (JDBC URL `jdbc:h2:mem:auto
 
 La API queda en **http://localhost:8080**.
 
+### Panel web
+Abre **http://localhost:8080** en el navegador para usar el panel visual: patio de vehículos por estado, inventario con precio en dólares, clientes, ventas con cálculo del descuento en vivo y taller. Usa la misma API REST, así que todas las reglas de negocio se aplican igual.
+
+
+
 ### Pruebas automáticas
 ```bash
 mvn test

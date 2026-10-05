@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoDrive Motors</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='8' width='28' height='16' rx='3' fill='%23F4C430' stroke='%231F2A33' stroke-width='2'/%3E%3Ctext x='16' y='20' font-family='Arial' font-weight='700' font-size='9' text-anchor='middle' fill='%231F2A33'%3EAD%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <aside class="sidebar">
+    <a class="brand" href="#/patio" aria-label="AutoDrive Motors, ir al patio">
+      <span class="brand-plate">AD</span>
+      <span class="brand-name">AutoDrive<br>Motors</span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#/patio" data-route="patio">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+        Patio
+      </a>
+      <a href="#/inventario" data-route="inventario">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.6-4.2A2 2 0 0 1 8.5 5.5h7a2 2 0 0 1 1.9 1.3L19 11m-14 0h14m-14 0a2 2 0 0 0-2 2v3h2m14-5a2 2 0 0 1 2 2v3h-2M5 16v2m14-2v2M5 16h14"/><circle cx="7.5" cy="13.5" r=".6"/><circle cx="16.5" cy="13.5" r=".6"/></svg>
+        Inventario
+      </a>
+      <a href="#/clientes" data-route="clientes">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3A6.5 6.5 0 0 1 21.5 20"/></svg>
+        Clientes
+      </a>
+      <a href="#/ventas" data-route="ventas">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg>
+        Ventas
+      </a>
+      <a href="#/taller" data-route="taller">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3.5 17.5a1.5 1.5 0 0 0 2.1 2.1l5.8-5.8a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-.6-.6-2.1z"/></svg>
+        Taller
+      </a>
+    </nav>
+    <div class="rate" id="rate" aria-live="polite">
+      <span class="rate-label">Dólar hoy</span>
+      <span class="rate-value" id="rate-value">Consultando…</span>
+    </div>
+  </aside>
+
+  <main id="main" tabindex="-1">
+    <header class="page-head">
+      <div>
+        <h1 id="page-title">Patio</h1>
+        <p id="page-sub" class="page-sub"></p>
+      </div>
+      <div id="page-actions" class="page-actions"></div>
+    </header>
+    <div id="view" class="view"></div>
+  </main>
+
+  <dialog id="modal" class="modal" aria-labelledby="modal-title">
+    <form method="dialog" id="modal-form" novalidate>
+      <header class="modal-head">
+        <h2 id="modal-title"></h2>
+        <button type="button" class="icon-btn" data-close aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </header>
+      <div id="modal-body" class="modal-body"></div>
+      <p id="modal-error" class="modal-error" role="alert" hidden></p>
+      <footer id="modal-foot" class="modal-foot"></footer>
+    </form>
+  </dialog>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
